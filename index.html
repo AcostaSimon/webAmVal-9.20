@@ -1,0 +1,793 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Descripcion - Tecnologias utilizadas - Datos del desarrollador -->
+    <meta name="description" content="Pagina de presentacion, informacion y contacto de América Valores.">
+    <meta name="keywords" content="HTML5, CSS3 - Bootstrap, JavaScript - API.HereMaps - tradingview">
+    <meta name="author" content="Simón M. Acosta [sma2347@gmail.com] - [Sep-2020]">
+    <title>Grupo América · América Valores</title>
+    <!-- Font: ingreso de fuente de letras de Google -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600|Open+Sans" rel="stylesheet">
+    <!-- Font-Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <!-- Icono de pestaña,imagen situada a un lado del titulo en la pestaña.-->
+    <link rel="shortcut icon" href="rec/logo1.png">
+    <!-- Titulo de la pestaña del navegador-->
+    <title>América Valores · Grupo América</title>
+    <!-- Material extraido de bootstrap-->
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/carousel/">
+    <!-- Custom styles for this template -->
+    <link href="style.css" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Hoja de estilos para Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Hoja de estilos para mapas de here -->
+    <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.1/mapsjs-ui.css" />
+    <!-- Mapa de .here -->
+    <script src="https://js.api.here.com/v3/3.1/mapsjs-core.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://js.api.here.com/v3/3.1/mapsjs-core-legacy.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://js.api.here.com/v3/3.1/mapsjs-service.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://js.api.here.com/v3/3.1/mapsjs-service-legacy.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://js.api.here.com/v3/3.1/mapsjs-mapevents.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://js.api.here.com/v3/3.1/mapsjs-ui.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<!-- Cuerpo, contenido de la pagina. -->
+
+<body>
+    <!-- Encabezado de pagina, navbar -->
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <!-- Icono de la barra de navegacion: -->
+            <a class="navbar-brand" style="color:white; margin-left: 35px; margin-right: 5%;"><img src="rec/logoGrupoV2.png" style="width: 36px; alt="LogoAmericaValores"> Grupo América · Valores
+                <!-- Alternador, expande/contrae el menu en caso de ventana/pantallas pequeñas -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button></a>
+            <!-- Menu de interaccion -->
+            <div class="collapse navbar-collapse" style="margin-left: 30%;" id="navbarCollapse">
+                <center>
+                    <ul class="navbar-nav mr-auto">
+                        <!-- NavBar, boton(PopUp) para redireccionar a "financiamientos".-->
+                        <li class="nav-item">
+                            <a class="nav-link btn mainMenu" style="color: white;" data-toggle="modal" data-target="#documentacion">Documentacion</a>
+                        </li>
+                        <!-- NavBar, boton(PopUp) para redireccionar a "financiamientos".-->
+                        <li class="nav-item">
+                            <a class="nav-link btn mainMenu" style="color: white;" data-toggle="modal" data-target="#asesores">Asesores</a>
+                        </li>
+                        <!-- NavBar, boton(PopUp) para redireccionar a "Financiamientos".-->
+                        <li class="nav-item">
+                            <a class="nav-link btn mainMenu" style="color: white;" data-toggle="modal" data-target="#exampleModalCenter">Financiamientos</a>
+                        </li>
+                        <!-- NavBar, boton(PopUp) para redireccionar a "Inversiones".-->
+                        <li class="nav-item">
+                            <a class="nav-link btn mainMenu" style="color: white;" data-toggle="modal" data-target="#inversiones">Inversiones</a>
+                        </li>
+                        <!-- NavBar, boton(PopUp) para redireccionar a "Clientes".-->
+                        <li class="nav-item login">
+                            <a class="nav-link btn mainMenu" style="color: white;" target="_blank" href="https://clientes.rosariovalores.com.ar/Irmo/0592">Cliente</a>
+                        </li>
+                        <!-- NavBar, boton(PopUp) para redireccionar a "".-->
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a>
+                        </li>
+                    </ul>
+                </center>
+            </div>
+        </nav>
+    </header>
+    <!--Page content-->
+    <main role="main" style="background-color: rgb(247,247,247);">
+        <!-- Direccion del carrusel -->
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Desplazamiento del carrusel - Hacia que plantilla se mueve -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+            </ol>
+            <!-- Carrusel: primera plantilla. -->
+            <div class="carousel-inner">
+                <div style="background-image: url('rec/banner.jpg'); background-size: cover;" class="carousel-item active">
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <a href="#"><img id="logoAV" src="rec/logoWhite.png" alt="logoAmericaValores"></a>
+                            <p class="centerText textBanner" style="opacity: 0.9; font-size: 17px"><br><br> Somos un Agente de Negociación registrado bajo el número 592 ante la Comisión Nacional de Valores.</p>
+                            <br><br>
+                            <a class="btn btn-lg btn-danger textBanner" href="mailto:info@americavalores.com.ar" role="button">Click para contacto</a></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Carrusel: segunda plantilla. -->
+                <div style="background-image: url('rec/banner2.png'); background-size: cover;" class="carousel-item">
+                    <div class="container">
+                        <div class="carousel-caption text-left textBanner">
+                            <!-- Introduccion de ¿quienes somos? -->
+                            <h1 style="color: rgb(245,245,245); cursor: context-menu;"> <img src="rec/logoGrupo.png" width="50px"> <u>América Valores:</u></h1>
+                            <br><br>
+                            <p style="color: rgb(245,245,245); opacity: 0.9; font-size: 17px;">Somos la puerta de entrada a todos los mercados financieros de Argentina: MAV, MATBA-ROFEX, BYMA, MAE.</p>
+                            <p style="color: rgb(245,245,245); opacity: 0.9; font-size: 17px;"> Nuestro primer objetivo es la atención personalizada para interpretar sus necesidades financieras, generando una propuesta integral que lo ayude a elegir la mejor alternativa del mercado de acuerdo a su perfil de inversor.</p>
+                            <p style="color: rgb(245,245,245); opacity: 0.9; font-size: 17px;">Contamos con un portfolio de productos financieros para desarrollar su rentabilidad: Cauciones (Plazo Fijo Bursátil), Dólar Mep, Fondos comunes de inversión, Bonos, ON y Acciones, Negociación de Cheques de Pago Diferido, Factura
+                                de Crédito Electrónica, Futuros y Opciones, Licitaciones Primarias.</p>
+                            <p><a class="btn btn-lg btn-danger" href="mailto:info@americavalores.com.ar" role="button">Click para contacto</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Flechas del carrusel - al dark click al area derecha/izquierda se genera un desplazamiento hacia su respectivo -->
+            <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Siguiente</span>
+            </a>
+        </div>
+        <!-- Columnas de texto informativas -> Redirecciones -> Bolsas y mercados -->
+        <div class="container marketing">
+            <div class="row">
+                <div class="col-lg-3">
+                    <center>
+                        <a class="imgNav" target="_blank" href="https://www.byma.com.ar/"><img src="rec/bymaC.png" alt=""></a>
+                        <p>La <b>Bolsa y Mercados Argentinos (B.Y.M.A.)</b> es una Bolsa de Valores que integra y representa a los principales actores del mercado de valores del pais.</p>
+                        <a class="btn btn btn-danger button-style" target="_blank" href="https://www.byma.com.ar/" role="button">Mas detalles &raquo;</a>
+                    </center>
+                </div>
+                <!-- /.col-lg-4 -->
+                <div class="col-lg-3">
+                    <center>
+                        <a class="imgNav" target="_blank" href="https://www.matbarofex.com.ar/"><img src="rec/mrCV2.png" alt=""></a>
+                        <p><b>Matba-Rofex</b> nace de la fusión de dos mercados de centenarios en la operatoria de futuros y opciones en Argentina, el Mercado a Término de Buenos Aires S.A. y ROFEX S.A.</p>
+                        <p><a class="btn btn-danger button-style" target="_blank" href="https://www.matbarofex.com.ar/" role="button">Mas detalles &raquo;</a></p>
+                    </center>
+                </div>
+                <!-- /.col-lg-4 -->
+                <div class="col-lg-3">
+                    <center>
+                        <a class="imgNav" target="_blank" href="https://www.cnv.gov.ar/sitioweb/"><img src="rec/CNV2.png" alt="cnv"></a>
+                        <p>La <b>Comisión Nacional de Valores</b> es un organismo autárquico actuante en la órbita de la Secretaría de Finanzas del Ministerio de Hacienda.</p>
+                        <p><a class="btn btn-danger button-style" target="_blank" href="https://www.cnv.gov.ar/sitioweb/" role="button">Mas detalles &raquo;</a></p>
+                    </center>
+                </div>
+                <!-- /.col-lg-4 -->
+                <div class="col-lg-3">
+                    <center>
+                        <a class="imgNav" target="_blank" href="http://www.mav-sa.com.ar/"><img src="rec/mercArgDeValoresV2.png" alt="cnv"></a>
+                        <p>El <b>Mercado Argentino de Valores</b> es un mercado especialista en productos no estandarizados, orientado a las empresas Pymes y a las economías regionales.</p>
+                        <a class="btn btn-danger button-style" target="_blank" href="http://www.mav-sa.com.ar/" role="button">Mas detalles &raquo;</a>
+                    </center>
+                </div>
+                <!-- /.col-lg-4 -->
+            </div>
+            <hr class="featurette-divider">
+            <!-- Mapa - ubicacion del establecimiento. -->
+            <div style="margin-left: 5%;" class="row featurette">
+                <!-- Informacion lateral -->
+                <div class="row col-md-6 justify-content-md-center">
+                    <center>
+                        <h3 style="cursor: context-menu;">Queremos conocerte!</h3>
+                        <hr>
+                    </center>
+                    <form action="enviar.php" method="POST">
+
+                        <!-- Formulario de consultas: -->
+                        <div style="margin-left: 25px;" class="row justify-content-md-center">
+                            <div class="col-md-6">
+                                <h6 style="cursor: context-menu;">¿Cual es tu nombre?</h6>
+                            </div>
+                            <div class="col-md-6">
+                                <h6 style="cursor: context-menu;">Ingresa tu mail:</h6>
+                            </div>
+                        </div>
+                        <!-- Formulario de Nombre y mail -->
+                        <div style="margin-left: 5px;" class="row col-md-12">
+                            <div class="col-md-6">
+                                <!-- Formulario de Nombre -->
+                                <input id="formulario-nombre" name="nombre" type="text" class="form-control form border-danger" placeholder="Ingrese su nombre.">
+                            </div><br><br>
+                            <!-- Formulario de Asunto -->
+                            <div class="col-md-6">
+                                <input id="formulario-mail" name="email" type="email" required="Ingrese su mail" class="form-control form border-danger" placeholder="Ej.: mail@ejemplo.com">
+                            </div>
+                        </div><br>
+                        <center>
+                            <h5 style="cursor: context-menu;">¿Sobre que podemos ayudarte?</h5>
+                        </center>
+                        <!-- Formulario de mensaje -->
+                        <div class="col-md-12">
+                            <input id="formulario-asunto" name="asunto" type="text" class="form-control form border-danger" placeholder="Asunto...">
+                        </div>
+                        <br>
+                        <div class="col-md-12">
+                            <textarea id="formulario-celular" name="mensaje" required="Ingrese su consulta!" class="form-control form border-danger" id="exampleFormControlTextarea1" placeholder="Detalle su mensaje..." rows="6"></textarea>
+                        </div><br>
+                        <div class="col-md-12">
+                            <h6>Celular de contacto:</h6>
+                            <input id="formulario-celular" name="celular" type="text" class="form-control form border-danger" placeholder="Ingrese su celular.">
+                        </div><br>
+                        <!-- Boton PopUp: Enviar-->
+                        <div class="contenedor">
+                            <button id="btn-abrir-popup" type="submit" class="btn-abrir-popup btn btn-danger button-style">Enviar</button>
+
+                        </div>
+                    </form>
+                    <hr>
+                </div>
+                <!-- Mapa lateral - .HERE -->
+                <div class="col-md-5 order-md-1" style="width: 100%; height: 500px; margin-right: 5%;">
+                    <div id="mapContainer" style="width: 100%; height: 500px; margin-right: 5%;"></div>
+                </div>
+            </div>
+            <br>
+        </div>
+        </div>
+        <!--------------------------------------------------------------------------[BOTONES-POPup]-->
+        <!-- Documentacion -->
+        <div class="modal fade" id="documentacion" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" style="color: crimson;" id="exampleModalLongTitle">Documentacion:</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span></button>
+                    </div>
+                    <div class="modal-body">
+                        <ul style="margin: 6%; FONT-SIZE:14px; COLOR:#000000;">
+                            <li>
+                                <a style="color: black;" href="https://www.americavalores.com.ar/wp-content/uploads/2020/01/AMERICA-VALORES-SA-IDONEOS-EN-EL-MERCADO-DE-CAPITALES.pdf" target="_blank">
+                                    <h5><span class="iconify" data-icon="teenyicons-certificate-outline" data-inline="false"></span> · Registro de idoneos.</h5>
+                                </a>
+                            </li>
+                            <hr>
+                            <li>
+                                <a style="color: black;" href="https://www.americavalores.com.ar/wp-content/uploads/2020/01/TABLA-DE-ARANCELES-AMERICA-VALORES.pdf" target="_blank">
+                                    <h5><span class="iconify" data-icon="cib:cashapp" data-inline="false"></span> · Aranceles Vigentes.</h5>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--------------------------------------------------------------------------[BOTONES-POPup]-->
+        <!-- Financiamientos -->
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" style="color: crimson;" id="exampleModalLongTitle">Financiamientos:</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span></button>
+                    </div>
+                    <div class="modal-body">
+                        <ul style="margin: 6%; FONT-SIZE:14px; COLOR:#000000;">
+                            <li>
+                                <p>Cheque de pago diferido.</p>
+                            </li>
+                            <hr>
+                            <li>
+                                <p>Pagare avalado.</p>
+                            </li>
+                            <hr>
+                            <li>
+                                <p>Factura de crédito electrónica.</p>
+                            </li>
+                        </ul>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--------------------------------------------------------------------------[BOTONES-POPup]-->
+        <!-- Inversiones -->
+        <div class="modal fade" id="inversiones" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" style="color: crimson;" id="exampleModalLongTitle">Inversiones:</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span></button>
+                    </div>
+                    <div class="modal-body">
+                        <ul style="margin: 6%; FONT-SIZE:14px; COLOR:#000000;">
+                            <li>
+                                <p>Administración de la liquidez a través de cauciones, Fondos Comunes de Inversión y demás instrumentos de corto plazo, negociados en los mercados de valores locales.</p>
+                            </li>
+                            <hr>
+                            <li>
+                                <p>Gestión de su cartera de inversiones a mediano y largo plazo, en activos negociados en los mercados locales e internacionales.</p>
+                            </li>
+                            <hr>
+                            <li>
+                                <p>Apertura de cuenta en el exterior para acceder a los mercados internacionales.</p>
+                            </li>
+                            <hr>
+                            <li>
+                                <p>Compra/venta de dólares.</p>
+                            </li>
+                            <hr>
+                            <li>
+                                <p>Cobertura de tipo de cambio en el Mercado futuro (ROFEX).</p>
+                            </li>
+                            <hr>
+                            <li>
+                                <p>Planeamiento Financiero.</p>
+                            </li>
+                            <hr>
+                            <li>
+                                <p>Seguimiento de las inversiones y comunicación periódica mediante informes.</p>
+                            </li>
+                            <hr>
+                            <li>
+                                <p>Asesoramiento impositivo y legal.</p>
+                            </li>
+                            <hr>
+                            <li>
+                                <p>Asesoría y disponibilidad para resolver consultas particulares sobre temas relacionados, directa o indirectamente, al manejo del patrimonio familiar.</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--------------------------------------------------------------------------[BOTONES-POPup]-->
+        <!-- Asesores -->
+        <div class="modal fade" id="asesores" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 style="cursor: default; color: crimson;" class="modal-title" id="asesores">Asesores del interior del pais:</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span></button>
+                    </div>
+                    <div class="modal-body">
+                        <ul style="margin: 6%;">
+                            <li style="FONT-SIZE:14px; COLOR:#000000;">
+                                <h6 style="cursor: default;"><u>FRANCO ROSSO:</u></h6>
+                                <p><span class="iconify" data-icon="simple-line-icons:location-pin" data-inline="false"></span><b> · Dir. de ofic.: </b><a style="color: black;" target="_blank" href="https://goo.gl/maps/dM7vw5ctPoKgc1U28"> Av. Fernando Igoillo 903, Leones <b>-</b> Córdoba</a></p>
+                                <p><span class="iconify" data-icon="simple-line-icons:phone" data-inline="false"></span><b> · Celular: </b> <a href="tel:+5493472467639" target="_blank" style="color: black;" target="_blank">3472<b>-</b>46-7639</a></p>
+                                <p><span class="iconify" data-icon="cib-mail-ru" data-inline="false"></span><b> · Correo: </b><a href="mailto:frossoamericavalores@gmail.com" target="_blank" style="color: black;" target="_blank">frossoamericavalores<b>@</b>gmail.com</a></p>
+                            </li>
+                            <hr>
+                            <li style="FONT-SIZE:14px; COLOR:#000000;">
+                                <h6 style="cursor: default;"><u>ORIANA MARTINENGHI:</u></h6>
+                                <p><span class="iconify" data-icon="simple-line-icons:location-pin" data-inline="false"></span><b> · Localidad: </b><a style="color: black;" target="_blank" href="https://www.google.com/maps/place/Las+Rosas,+Santa+Fe/@-32.4767998,-61.5985418,14z/data=!3m1!4b1!4m5!3m4!1s0x95ca1d95dfbbd23d:0x28c7f56e84ae61cd!8m2!3d-32.4751189!4d-61.5766664">Las Rosas <b>(</b>C.P.: 2520<b>) - </b> Santa Fe</a></p>
+                                <p><span class="iconify" data-icon="simple-line-icons:phone" data-inline="false"></span><b> · Celular: </b> <a href="tel:+5493471580213" target="_blank" style="color: black;" target="_blank">3471<b>-</b>58-0213</a></p>
+                                <p><span class="iconify" data-icon="cib-mail-ru" data-inline="false"></span><b> · Correo: </b><a href="mailto:orianamartinenghi@gmail.com" target="_blank" style="color: black;" target="_blank">orianamartinenghi<b>@</b>gmail.com</a></p>
+                            </li>
+                            <hr>
+                            <li style="FONT-SIZE:14px; COLOR:#000000;">
+                                <h6 style="cursor: default;"><u>ARIEL BIANCHINI:</u></h6>
+                                <p><span class="iconify" data-icon="simple-line-icons:location-pin" data-inline="false"></span><b> · Dir. de ofic.: </b><a style="color: black;" target="_blank" href="https://www.google.com/maps/place/Avenida+San+Martin+469,+Conesa,+Provincia+de+Buenos+Aires/@-33.5947015,-60.3581485,17z/data=!3m1!4b1!4m5!3m4!1s0x95b9da2e80232819:0xcf64acd831a9ec82!8m2!3d-33.5947015!4d-60.3559598"> Av. San Martín 469 <b>-</b> Conesa, Buenos Aires</a></p>
+                                <p><span class="iconify" data-icon="simple-line-icons:phone" data-inline="false"></span><b> · Celular: </b> <a href="tel:+5493364495782" target="_blank" style="color: black;" target="_blank">3364<b>-</b>49-5782</a></p>
+                                <p><span class="iconify" data-icon="cib-mail-ru" data-inline="false"></span><b> · Correo: </b><a href="mailto:bianchiariel65@gmail.com" target="_blank" style="color: black;" target="_blank">bianchiariel65<b>@</b>gmail.com</a></p>
+                            </li>
+                            <hr>
+                            <li style="FONT-SIZE:14px; COLOR:#000000;">
+                                <h6 style="cursor: default;"><u>ADRIAN CAMELINO</u> y <u>MARIELA SOSA</u>:</h6>
+                                <p><span class="iconify" data-icon="simple-line-icons:location-pin" data-inline="false"></span><b> · Localidad: </b><a style="color: black;" target="_blank" href="https://www.google.com/maps/place/R%C3%ADo+Cuarto,+C%C3%B3rdoba/data=!4m2!3m1!1s0x95d2000fbdd02247:0xc58d0a705d7cc0e3?sa=X&ved=2ahUKEwibxLLE8frrAhULH7kGHYQyBGIQ8gEwJnoECBsQBA">Rio Cuarto - Cordoba</a></p>
+                                <p><span class="iconify" data-icon="simple-line-icons:phone" data-inline="false"></span><b> · Celular: </b> <a href="tel:+549358485722" target="_blank" style="color: black;" target="_blank">3584<b>-</b>85-7222</a></p>
+                                <p><span class="iconify" data-icon="cib-mail-ru" data-inline="false"></span><b> · Correo: </b><a href="mailto:aacamelino@fibertel.com.ar" target="_blank" style="color: black;" target="_blank">aacamelino<b>@</b>fibertel.com.ar</a></p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--------------------------------------------------------------------------[BOTONES-POPup]-->
+        <!-- Enviar -->
+        <div class="overlay" id="overlay">
+            <div class="popup" id="popup">
+                <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
+                <p>En breve nos pondremos en contacto!</p>
+                <b>Gracias por su mensaje!</b>
+                <div>
+                    <img src="rec/Grupo_América.png" style="width: 35%; height: 35%;" alt="">
+                </div>
+            </div>
+        </div>
+        <!---GraficosDeMercados--------------------------------------------------------[ACCORDION]-->
+        <center>
+            <h4>Actualmente en desarrollo su version mobile</h4>
+            <div id="accordion" style="width: 95%;">
+                <div class="card" style="margin-right: auto; margin-left: auto;">
+                    <center>
+                        <div class="card-header" style="background-color:  #8b0000; border-radius: 8px;" id="headingOne">
+                            <h5 class="mb-0">
+                                <button style="color: white; text-decoration: none;" class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Desarrollos del mercado:
+                                </button>
+                            </h5>
+                        </div>
+                    </center>
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                        <!--======================================================================================================
+                            COLUMNA: 1ERA FILA - Mercado
+                            ======================================================================================================-->
+                        <div class="row card-body">
+                            <!-- Columnas: Grafico de riesgo forex -->
+
+                            <!-- TradingView Widget BEGIN - Cambio forex -->
+                            <div class="tradingview-widget-container col-md-6">
+                                <div class="tradingview-widget-container__widget"></div>
+                                <div class="tradingview-widget-copyright"><a href="https://es.tradingview.com/markets/currencies/forex-cross-rates/" rel="noopener" target="_blank"><span class="blue-text">Cambios forex</span></a> por TradingView</div>
+                                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-forex-cross-rates.js" async>
+                                    {
+                                        "width": "100%",
+                                        "height": 400,
+                                        "currencies": [
+                                            "ARS",
+                                            "BRL",
+                                            "EUR",
+                                            "USD",
+                                            "CNY",
+                                            "JPY",
+                                            "GBP",
+                                            "AUD",
+                                            "CAD"
+                                        ],
+                                        "isTransparent": false,
+                                        "colorTheme": "dark",
+                                        "locale": "es"
+                                    }
+                                </script>
+                            </div>
+                            <!-- TradingView Widget END -->
+
+                            <!-- TradingView Widget BEGIN - Riesgo forex -->
+                            <div class="tradingview-widget-container col-md-6">
+                                <div class="tradingview-widget-container__widget"></div>
+                                <div class="tradingview-widget-copyright"><a href="https://es.tradingview.com/markets/currencies/forex-heat-map/" rel="noopener" target="_blank"><span class="blue-text">Mapa de riesgos forex</span></a> por TradingView</div>
+                                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-forex-heat-map.js" async>
+                                    {
+                                        "width": "100%",
+                                        "height": 400,
+                                        "currencies": [
+                                            "ARS",
+                                            "BRL",
+                                            "EUR",
+                                            "USD",
+                                            "CNY",
+                                            "JPY",
+                                            "GBP",
+                                            "AUD",
+                                            "CAD"
+                                        ],
+                                        "isTransparent": false,
+                                        "colorTheme": "dark",
+                                        "locale": "es"
+                                    }
+                                </script>
+                            </div>
+                            <!-- TradingView Widget END -->
+                        </div>
+                        <!--======================================================================================================
+                         COLUMNA: 2DA FILA - Indice de mercado
+                        ======================================================================================================-->
+                        <div class="row card-body">
+                            <!-- TradingView Widget BEGIN - DATOS DEL MERCADO -->
+                            <div class="tradingview-widget-container col-md-6">
+                                <div class="tradingview-widget-container__widget"></div>
+                                <div class="tradingview-widget-copyright">
+                                    <a href="https://es.tradingview.com" rel="noopener" target="_blank">
+                                        <span class="blue-text">índice del mercado</span></a> por TradingView</div>
+                                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-quotes.js" async>
+                                    {
+                                        "width": "100%",
+                                        "height": 400,
+                                        "symbolsGroups": [{
+                                            "name": "Índices",
+                                            "originalName": "índice",
+                                            "symbols": [{
+                                                "name": "FOREXCOM:SPXUSD",
+                                                "displayName": "S&P 500"
+                                            }, {
+                                                "name": "FOREXCOM:NSXUSD",
+                                                "displayName": "Nasdaq 100"
+                                            }, {
+                                                "name": "FOREXCOM:DJI",
+                                                "displayName": "Dow 30"
+                                            }, {
+                                                "name": "INDEX:NKY",
+                                                "displayName": "Nikkei 225"
+                                            }, {
+                                                "name": "INDEX:DEU30",
+                                                "displayName": "DAX Index"
+                                            }, {
+                                                "name": "FOREXCOM:UKXGBP",
+                                                "displayName": "FTSE 100"
+                                            }]
+                                        }, {
+                                            "name": "Materias primas",
+                                            "originalName": "Commodities",
+                                            "symbols": [{
+                                                "name": "CME_MINI:ES1!",
+                                                "displayName": "S&P 500"
+                                            }, {
+                                                "name": "CME:6E1!",
+                                                "displayName": "Euro"
+                                            }, {
+                                                "name": "COMEX:GC1!",
+                                                "displayName": "Gold"
+                                            }, {
+                                                "name": "NYMEX:CL1!",
+                                                "displayName": "Crude Oil"
+                                            }, {
+                                                "name": "NYMEX:NG1!",
+                                                "displayName": "Natural Gas"
+                                            }, {
+                                                "name": "CBOT:ZC1!",
+                                                "displayName": "Corn"
+                                            }]
+                                        }, {
+                                            "name": "Bonos",
+                                            "originalName": "Bonds",
+                                            "symbols": [{
+                                                "name": "CME:GE1!",
+                                                "displayName": "Eurodollar"
+                                            }, {
+                                                "name": "CBOT:ZB1!",
+                                                "displayName": "T-Bond"
+                                            }, {
+                                                "name": "CBOT:UB1!",
+                                                "displayName": "Ultra T-Bond"
+                                            }, {
+                                                "name": "EUREX:FGBL1!",
+                                                "displayName": "Euro Bund"
+                                            }, {
+                                                "name": "EUREX:FBTP1!",
+                                                "displayName": "Euro BTP"
+                                            }, {
+                                                "name": "EUREX:FGBM1!",
+                                                "displayName": "Euro BOBL"
+                                            }]
+                                        }, {
+                                            "name": "Forex",
+                                            "originalName": "Forex",
+                                            "symbols": [{
+                                                "name": "FX:EURUSD"
+                                            }, {
+                                                "name": "FX:GBPUSD"
+                                            }, {
+                                                "name": "FX:USDJPY"
+                                            }, {
+                                                "name": "FX:USDCHF"
+                                            }, {
+                                                "name": "FX:AUDUSD"
+                                            }, {
+                                                "name": "FX:USDCAD"
+                                            }]
+                                        }],
+                                        "colorTheme": "dark",
+                                        "isTransparent": false,
+                                        "locale": "es"
+                                    }
+                                </script>
+                                <!-- TradingView Widget END -->
+                            </div>
+                            <!-- TradingView Widget BEGIN - MATERIAS PRIMAS -->
+                            <div class="tradingview-widget-container col-md-6">
+                                <div class="tradingview-widget-container__widget"></div>
+                                <div class="tradingview-widget-copyright"><a href="https://es.tradingview.com/markets/futures/" rel="noopener" target="_blank"><span class="blue-text">Precios de materias primas</span></a> por TradingView</div>
+                                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-quotes.js" async>
+                                    {
+                                        "title": "Materias primas",
+                                        "width": "100%",
+                                        "height": 400,
+                                        "locale": "es",
+                                        "symbolsGroups": [{
+                                            "name": "Energía",
+                                            "symbols": [{
+                                                "name": "NYMEX:CL1!",
+                                                "displayName": "Petróleo"
+                                            }, {
+                                                "name": "NYMEX:NG1!",
+                                                "displayName": "Gas natural"
+                                            }, {
+                                                "name": "TVC:UKOIL",
+                                                "displayName": "Petróleo Brent"
+                                            }, {
+                                                "name": "NYMEX:RB1!",
+                                                "displayName": "Gasolina"
+                                            }, {
+                                                "name": "NYMEX:HO1!",
+                                                "displayName": "Combustible para calefacción"
+                                            }, {
+                                                "name": "NYMEX:AEZ1!",
+                                                "displayName": "Etanol"
+                                            }]
+                                        }, {
+                                            "name": "Metales",
+                                            "symbols": [{
+                                                "name": "COMEX:GC1!",
+                                                "displayName": "Oro"
+                                            }, {
+                                                "name": "COMEX:SI1!",
+                                                "displayName": "Plata"
+                                            }, {
+                                                "name": "NYMEX:PL1!",
+                                                "displayName": "Platino"
+                                            }, {
+                                                "name": "COMEX_MINI:QC1!",
+                                                "displayName": "Cobre"
+                                            }, {
+                                                "name": "COMEX:ZNC1!",
+                                                "displayName": "Zinc"
+                                            }]
+                                        }, {
+                                            "name": "Agricultura",
+                                            "symbols": [{
+                                                "name": "NYMEX:KT1!",
+                                                "displayName": "Café"
+                                            }, {
+                                                "name": "NYMEX:TT1!",
+                                                "displayName": "Algodón"
+                                            }, {
+                                                "name": "CBOT:ZS1!",
+                                                "displayName": "Soja"
+                                            }, {
+                                                "name": "CBOT:ZW1!",
+                                                "displayName": "Trigo"
+                                            }, {
+                                                "name": "NYMEX:YO1!",
+                                                "displayName": "Azúcar"
+                                            }, {
+                                                "name": "CBOT:ZC1!",
+                                                "displayName": "Maíz"
+                                            }]
+                                        }, {
+                                            "name": "Divisas",
+                                            "symbols": [{
+                                                "name": "CME:6E1!",
+                                                "displayName": "Euro"
+                                            }, {
+                                                "name": "CME:6B1!",
+                                                "displayName": "Libra esterlina"
+                                            }, {
+                                                "name": "CME:6J1!",
+                                                "displayName": "Yen japonés"
+                                            }, {
+                                                "name": "CME:6S1!",
+                                                "displayName": "Franco suizo"
+                                            }, {
+                                                "name": "CME:6A1!",
+                                                "displayName": "Dólar australiano"
+                                            }, {
+                                                "name": "CME:6C1!",
+                                                "displayName": "Dólar canadiense"
+                                            }]
+                                        }, {
+                                            "name": "Índices",
+                                            "symbols": [{
+                                                "name": "CME:SP1!",
+                                                "displayName": "S&P 500"
+                                            }, {
+                                                "name": "CME_MINI:NQ1!",
+                                                "displayName": "Nasdaq 100"
+                                            }, {
+                                                "name": "CBOT_MINI:YM1!",
+                                                "displayName": "Dow 30"
+                                            }, {
+                                                "name": "CME:NKD1!",
+                                                "displayName": "Nikkei 225"
+                                            }, {
+                                                "name": "EUREX:FDAX1!",
+                                                "displayName": "DAX"
+                                            }, {
+                                                "name": "CME:IBV1!",
+                                                "displayName": "IBovespa"
+                                            }]
+                                        }, {
+                                            "name": "Tipos de interés",
+                                            "symbols": [{
+                                                "name": "CBOT:ZN1!",
+                                                "displayName": "Pagaré del tesoro a 10 años"
+                                            }, {
+                                                "name": "CBOT:ZF1!",
+                                                "displayName": "Pagaré del tesoro a 5 años"
+                                            }, {
+                                                "name": "CBOT:Z3N1!",
+                                                "displayName": "Pagaré del tesoro a 3 años"
+                                            }, {
+                                                "name": "CBOT:ZT1!",
+                                                "displayName": "Pagaré del tesoro a 2 años"
+                                            }, {
+                                                "name": "CBOT:ZQ1!",
+                                                "displayName": "Tipo de interés de los fondos de la reserva federal a 30 días"
+                                            }, {
+                                                "name": "CBOT:ZB1!",
+                                                "displayName": "T-Bond"
+                                            }]
+                                        }],
+                                        "colorTheme": "dark"
+                                    }
+                                </script>
+                            </div>
+                            <!-- TradingView Widget END -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </center>
+        <!-- Fin de main -->
+    </main>
+    <br><br><br><br><br>
+    <!-- footer -->
+    <div class="piePagina" style="width: 100%; margin-top: -100px; margin-bottom: -100px;">
+        <!-- FOOTER -> Pie de pagina -->
+        <div class="container"><br>
+            <!-- ---------------------------------------------------------------------------------------------------------------------->
+            <!-- Iconos de Redes Sociales -->
+            <div class="row justify-content-md-center">
+                <div class="col-md-auto">
+                    <a class="menuContacto textLink" href="mailto:info@americavalores.com.ar" style="text-decoration: none;" target="_blank"><span class="iconify" data-icon="cib-mail-ru" data-inline="false"></span> · info<b>@</b>americavalores.com.ar</a>
+                </div>
+                <div class="col-md-auto">
+                    <a class="menuContacto textLink" href="https://www.linkedin.com/company/america-valores/" style="text-decoration: none;" target="_blank"><span class="iconify" data-icon="simple-line-icons:social-linkedin" data-inline="false"></span> · América-valores</a>
+                </div>
+                <div class="col-md-auto">
+                    <a class="menuContacto textLink" href="https://twitter.com/AmericaValores" style="text-decoration: none;" target="_blank"><span class="iconify" data-icon="simple-line-icons:social-twitter" data-inline="false"></span >·@AmericaValores</a>
+                </div>
+                <div class="col-md-auto">
+                    <a class="menuContacto textLink" href="https://www.facebook.com/GAmericaValores/about/?ref=page_internal" style="text-decoration: none;" target="_blank"><span class="iconify" data-icon="simple-line-icons:social-facebook" data-inline="false"></span> · GAmericaValores</a>
+                </div>
+                <div class="col-md-auto">
+                    <a class="menuContacto textLink" href="https://www.instagram.com/grupoamerica_valores/" style="text-decoration: none;" target="_blank"><span class="iconify" data-icon="simple-line-icons:social-instagram" data-inline="false"></span > · @grupoAmerica_valores</a>
+                </div>
+            </div>
+            <!-- Iconos de ContactoTradicional -->
+            <div class="row justify-content-md-center">
+                <div class="col-md-auto">
+                    <a class="menuContacto textLink" href="tel:+5493415272930" style="text-decoration: none;" target="_blank"><span class="iconify" data-icon="simple-line-icons:phone" data-inline="false"></span> · 341 <b>-</b> 5272930</a>
+                </div>
+                <div class="col-md-auto">
+                    <!-- Iconos de contacto -->
+                    <a class="menuContacto textLink" href="https://www.google.com.ar/maps/dir//Hermes+1,+C%C3%B3rdoba+1365,+S2000AWS+Rosario,+Santa+Fe/@-32.9458134,-60.6440987,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x95b7ab17bc9944e7:0x7846a91437a6480c!2m2!1d-60.64191!2d-32.9458179"
+                        style="text-decoration: none;" target="_blank"><span class="iconify" data-icon="simple-line-icons:location-pin" data-inline="false"></span> · Cordoba 1365 - Piso 1 Ofi.1 <b>[</b>Peatonal Cordoba<b>]</b>   
+                    </div>
+                    <div class="col-md-auto">
+                        <p>&copy; Copyright 2020. All Rights Reserved <b>&middot;</b>
+                            <a class="textLink" href="https://www.Americavalores.com.ar/"><b>América Valores </b></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        </footer><br>
+    </div>
+    <!-- Bootstrap core JavaScript
+        ================================================== -->
+    <!-- Bootstrap + Jquery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- JavaScript pionero -->
+    <script src="js.js"></script>
+    <!-- Iconos de iconify-->
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>
+        window.jQuery || document.write('<script src="assets/js/vendor/jquery-slim.min.js"><\/script>')
+    </script>
+    <script src="/assets/js/vendor/popper.min.js"></script>
+    <script src="dist/js/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="assets/js/vendor/holder.min.js"></script>
+</body>
+
+</html>
